@@ -1,0 +1,7 @@
+.selected-item {
+    display: inline;
+    background-color: gray;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+}

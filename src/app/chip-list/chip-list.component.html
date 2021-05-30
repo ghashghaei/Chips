@@ -1,0 +1,21 @@
+<div class="chip-input border rounded border-secondary">
+    <div class="d-inline">
+        <div class="holder" *ngFor="let item of selectedLanguages">
+            <span>{{item}}</span>
+            <i class="material-icons" (click)="remove(item)">
+        clear
+      </i>
+        </div>
+    </div>
+
+    <div class="d-inline ml-1">
+        <mat-form-field appearance="none">
+            <input type="text" #languageInput placeholder="Type a programming language" (keyup)="applyFilter($event.target.value)" matInput [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectionChange($event.option)">
+                <mat-option *ngFor="let item of selectableLanguage" [value]="item">
+                    {{item}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+</div>

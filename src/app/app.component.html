@@ -1,0 +1,16 @@
+<div class="w-70 pt-5">
+    <mat-card class="w-75 mx-auto">
+        <mat-card-title>
+            Chip List
+        </mat-card-title>
+        <app-chip-list [languages]="languages" [(ngModel)]="selectedLanguages"></app-chip-list>
+    </mat-card>
+    <mat-card class="w-75 mx-auto mt-5">
+        <mat-card-title class="mb-5">
+            Selected items in main page(using ngmodel)
+        </mat-card-title>
+        <div class="selected-item" *ngFor="let item of selectedLanguages">
+            <span>{{item}}</span>
+        </div>
+    </mat-card>
+</div>
